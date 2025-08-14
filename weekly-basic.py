@@ -43,7 +43,7 @@ for company in stocks:  # Lets run it om each
             elif data_daily.index[i] in sell_dates:  # Perform sell
                 holding = False
                 running_price = running_price * day_change
-                strategy_performance.append(running_price)  # strategy performance changed at time of buy
+                strategy_performance.append(running_price)  # strategy performance changed at time of sell
 
             elif holding == True:
                 running_price = running_price * day_change  # change strategy value because holding
